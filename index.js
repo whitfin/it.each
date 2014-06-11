@@ -31,7 +31,7 @@ module.exports = function() {
 								}
 								args[i] = ref[keys[keys.length - 1]];
 							} else {
-								args[i] = element[i];
+								args[i] = element[args[i]];
 							}
 						}
 					}
