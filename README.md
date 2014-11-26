@@ -19,10 +19,12 @@ $ npm install it-each
 
 ### Usage ###
 
-The idea of this method is to stay simple. Simply require in this module **after** you have instantiated Mocha, and before you use an `it.each` loop.
+The idea of this method is to stay simple. Simply require in this module **after** you have instantiated Mocha, and before you use an `it.each` loop. If you wish to have a separate test listing for each iteration, include an options object containining `testPerIteration` set to `true`.
 
 ```
 require('it-each')();
+
+require('it-each')({ testPerIteration: true });
 ```
 
 This will enable `it.each()` for use in your testing. There are two different ways you can use `it.each`, one with dynamic titles, and one with static titles. Dynamic is better if you're intending to track your tests through the loop, whereas static is very similar to just putting an async loop inside your call to the usual `it`.
