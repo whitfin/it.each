@@ -1,25 +1,27 @@
 {
-	"name":"it-each",
-	"version":"0.1.1",
-	"description":"Enable basic async test looping in Mocha",
-	"author":{
-		"name":"Isaac Whitfield",
-		"email":"iwhitfield@appcelerator.com"
-	},
-	"repository":{
-		"type":"git",
-		"url":"http://github.com/iwhitfield/it.each.git"
-	},
-	"bugs":"http://github.com/iwhitfield/it.each/issues",
-	"license":"MIT",
-	"readmeFilename":"README.md",
-	"keywords":[
-		"mocha",
-		"async",
-		"iterable"
-	],
-	"dependencies":{
-		"async":"*",
-		"mocha":"*"
-	}
+    "name":"it-each",
+    "version":"0.1.1",
+    "description":"Enable basic async test looping in Mocha",
+    "author":{
+        "name":"Isaac Whitfield",
+        "email":"iwhitfield@appcelerator.com"
+    },
+    "repository":{
+        "type":"git",
+        "url":"http://github.com/iwhitfield/it.each.git"
+    },
+    "bugs":"http://github.com/iwhitfield/it.each/issues",
+    "license":"MIT",
+    "readmeFilename":"README.md",
+    "keywords":[
+        "mocha",
+        "async",
+        "iterable"
+    ],
+    "dependencies":{
+        "async":"*"
+    },
+    "devDependencies":{
+        "mocha":"*"
+    }
 }

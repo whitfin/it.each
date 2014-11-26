@@ -1,58 +1,58 @@
 var async = require('async'),
-	format = require('util').format;
+    format = require('util').format;
 
 module.exports = function(opts) {
 
-	var _opts = opts || {};
+    var _opts = opts || {};
 
-	it.each = function (iterator, title, fields, process) {
+    it.each = function (iterator, title, fields, process) {
 
-		if(_opts.testPerIteration) {
+        if(_opts.testPerIteration) {
 
-			iterator.forEach(function (test, index) {
+            iterator.forEach(function (test, index) {
 
-				var testName = title;
+                var testName = title;
 
-				if (typeof fields != 'function') {
-					testName = format.apply(this, generateArgs(test, title, fields, index));
-				} else {
-					process = fields;
-				}
+                if (typeof fields != 'function') {
+                    testName = format.apply(this, generateArgs(test, title, fields, index));
+                } else {
+                    process = fields;
+                }
 
-				it(testName, process.bind(null, test));
+                it(testName, process.bind(null, test));
 
-			});
+            });
 
-		} else {
+        } else {
 
-			it('should begin a loop', function (done) {
-				var multiplier = iterator.length || Object.keys(iterator).length,
-					that = this,
-					x = 0;
+            it('should begin a loop', function (done) {
+                var multiplier = iterator.length || Object.keys(iterator).length,
+                    that = this,
+                    x = 0;
 
-				this.slow(this.slow * multiplier);
-				this.timeout(this.timeout * multiplier);
+                this.slow(this.slow * multiplier);
+                this.timeout(this.timeout * multiplier);
 
-				async.eachSeries(iterator, function (element, next) {
+                async.eachSeries(iterator, function (element, next) {
 
-					x += 1;
+                    x += 1;
 
-					var progress = ' - ' + x + '/' + iterator.length;
-					if (typeof fields != 'function') {
-						var args = generateArgs(element, title, fields, x);
-						that._runnable.title = format.apply(this, args) + progress;
-					} else {
-						that._runnable.title = title + progress;
-						process = fields;
-					}
+                    var progress = ' - ' + x + '/' + iterator.length;
+                    if (typeof fields != 'function') {
+                        var args = generateArgs(element, title, fields, x);
+                        that._runnable.title = format.apply(this, args) + progress;
+                    } else {
+                        that._runnable.title = title + progress;
+                        process = fields;
+                    }
 
-					process(element, next);
+                    process(element, next);
 
-				}, done);
-			});
+                }, done);
+            });
 
-		}
-	}
+        }
+    }
 
 };
 
@@ -68,21 +68,21 @@ module.exports = function(opts) {
  * @param index		the index of the iteration
  */
 function generateArgs(test, title, fields, index){
-	var formatting = fields.concat(),
-		args = (formatting.unshift(title), formatting);
-	for (var i = 1; i <= args.length - 1; i++) {
-		if (args[i] == 'x') {
-			args[i] = index;
-		} else if (args[i] == 'element') {
-			args[i] = test;
-		} else {
-			var keys = i.split('.'),
-				ref = test;
-			for (var j = 0; j < keys.length - 1; j++) {
-				ref = ref[keys[j]] || {};
-			}
-			args[i] = ref[keys[keys.length - 1]];
-		}
-	}
-	return args;
+    var formatting = fields.concat(),
+        args = (formatting.unshift(title), formatting);
+    for (var i = 1; i <= args.length - 1; i++) {
+        if (args[i] == 'x') {
+            args[i] = index;
+        } else if (args[i] == 'element') {
+            args[i] = test;
+        } else {
+            var keys = i.split('.'),
+                ref = test;
+            for (var j = 0; j < keys.length - 1; j++) {
+                ref = ref[keys[j]] || {};
+            }
+            args[i] = ref[keys[keys.length - 1]];
+        }
+    }
+    return args;
 }
