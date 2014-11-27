@@ -76,12 +76,16 @@ function generateArgs(test, title, fields, index){
         } else if (args[i] == 'element') {
             args[i] = test;
         } else {
-            var keys = i.split('.'),
-                ref = test;
-            for (var j = 0; j < keys.length - 1; j++) {
-                ref = ref[keys[j]] || {};
+            if (~i.toString().indexOf('.')) {
+                var keys = i.split('.');
+                var ref = test;
+                for (var j = 0; j < keys.length - 1; j++) {
+                    ref = ref[keys[j]] || {};
+                }
+                args[i] = ref[keys[keys.length - 1]];
+            } else {
+                args[i] = test[args[i]];
             }
-            args[i] = ref[keys[keys.length - 1]];
         }
     }
     return args;
