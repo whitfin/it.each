@@ -76,8 +76,8 @@ function generateArgs(test, title, fields, index){
         } else if (args[i] == 'element') {
             args[i] = test;
         } else {
-            if (~i.toString().indexOf('.')) {
-                var keys = i.split('.');
+            if (!test[args[i]]) {
+                var keys = args[i].split('.');
                 var ref = test;
                 for (var j = 0; j < keys.length - 1; j++) {
                     ref = ref[keys[j]] || {};

@@ -13,6 +13,20 @@ describe('Testing it.each() with different titles', function() {
     // Static
     it.each([1, 2, 3, 4, 5], 'Test of it.each()', request);
 
+    // Dynamic
+    it.each([
+        { host: 'www.bbc.co.uk' },
+        { host: 'www.theguardian.com' },
+        { host: 'www.skynews.com' }
+    ], 'Test ping of %s', ['host'], request);
+
+    // Dynamic
+    it.each([
+        { inner: { host: 'www.bbc.co.uk' } },
+        { inner: { host: 'www.theguardian.com' } },
+        { inner: { host: 'www.skynews.com' } }
+    ], 'Test ping of %s', ['inner.host'], request);
+
 });
 
 describe('Testing it.each() with tests per iteration', function() {
