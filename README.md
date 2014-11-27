@@ -51,10 +51,10 @@ Here is what the above translates to:
 Here is an example of a title/fields combination.
 
 ```
-var examples = [{ 'example' : 1, 'nested.example' : 2 }];
+var examples = [{ 'example' : 1, 'nested.example' : 2, 'inner' : { 'nest' : 3 } }];
 
 // Your test title will extract the fields and result in a title of 'Example 1 with nest 2'
-it.each(examples, 'Example %s with nest %s', ['example', 'nested.example'], ...);
+it.each(examples, 'Example %s with key %s and nest %s', ['example', 'nested.example', 'inner.nest'], ...);
 ```
 
 There are two reserved keywords you can pass to the fields array, `'x'` and `'element'`. In this case, `x` will represent the iteration number the current test is on, and `element` will be the entire element in the current processing loop.
