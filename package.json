@@ -1,27 +1,44 @@
 {
-    "name":"it-each",
-    "version":"0.2.0",
-    "description":"Enable basic async test looping in Mocha",
-    "author":{
-        "name":"Isaac Whitfield",
-        "email":"iwhitfield@appcelerator.com"
-    },
-    "repository":{
-        "type":"git",
-        "url":"http://github.com/iwhitfield/it.each.git"
-    },
-    "bugs":"http://github.com/iwhitfield/it.each/issues",
-    "license":"MIT",
-    "readmeFilename":"README.md",
-    "keywords":[
-        "mocha",
-        "async",
-        "iterable"
-    ],
-    "dependencies":{
-        "async":"*"
-    },
-    "devDependencies":{
-        "mocha":"*"
+  "name": "it-each",
+  "version": "0.2.0",
+  "description": "Enable basic async test looping in Mocha",
+  "author": {
+    "name": "Isaac Whitfield",
+    "email": "iwhitfield@appcelerator.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/iwhitfield/it.each.git"
+  },
+  "bugs": "http://github.com/iwhitfield/it.each/issues",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "keywords": [
+    "async",
+    "mocha",
+    "iterable"
+  ],
+  "devDependencies": {
+    "blanket": "^1.1.6",
+    "mocha": "^2.1.0",
+    "mocha-lcov-reporter": "0.0.1",
+    "should": "^5.0.0"
+  },
+  "scripts": {
+    "coverage": "mocha -r blanket -R html-cov test > coverage.html",
+    "travis": "mocha test; mocha --R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",
+    "test": "mocha test"
+  },
+  "config": {
+    "blanket": {
+      "data-cover-never": [
+        "node_modules",
+        "test"
+      ],
+      "pattern": [
+        "lib/it.each.js",
+        "lib/util.js"
+      ]
     }
+  }
 }
