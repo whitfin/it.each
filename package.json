@@ -1,6 +1,6 @@
 {
   "name": "it-each",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Enable basic async test looping in Mocha",
   "author": {
     "name": "Isaac Whitfield",
