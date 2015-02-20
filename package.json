@@ -19,14 +19,14 @@
     "iterable"
   ],
   "devDependencies": {
-    "blanket": "^1.1.6",
-    "mocha": "^2.1.0",
+    "blanket": "1.1.6",
+    "coveralls": "2.11.2",
+    "mocha": "2.1.0",
     "mocha-lcov-reporter": "0.0.1",
-    "should": "^5.0.0"
+    "should": "5.0.0"
   },
   "scripts": {
     "coverage": "mocha -r blanket -R html-cov test > coverage.html",
-    "travis": "mocha test; mocha --R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",
     "test": "mocha test"
   },
   "config": {

@@ -6,3 +6,6 @@
 
 # node stuff
 node_modules
+
+# npm stuff
+npm-debug.log
