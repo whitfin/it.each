@@ -5,5 +5,3 @@ node_js:
   - "0.10"
   - "0.8"
   - "iojs"
-after_success:
-  - source report_coverage.sh

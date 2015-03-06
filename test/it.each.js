@@ -6,7 +6,7 @@ describe('it.each with testPerIteration: true', function(){
         testPerIteration: true
     });
 
-    it.each([1], 'should be able to access the Mocha context', function(element){
+    it.each([1], 'should be able to access the Mocha context', function(/* element */){
         this.slow(1000);
         this.timeout(1000);
 
@@ -31,7 +31,7 @@ describe('it.each with testPerIteration: true', function(){
 
         this.slow(1000);
 
-        it.each([1], 'synchronously', function(element){
+        it.each([1], 'synchronously', function(/* element */){
             this._runnable.title.length.should.be.greaterThan(1);
         });
 
@@ -65,25 +65,25 @@ describe('it.each with testPerIteration: true', function(){
 
     describe('titles', function(){
 
-        it.each([1], 'should contain the current index: %s', ['x'], function(element){
+        it.each([1], 'should contain the current index: %s', ['x'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('0');
         });
 
-        it.each([1], 'should contain the current element: %s', ['element'], function(element){
+        it.each([1], 'should contain the current element: %s', ['element'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('1');
         });
 
-        it.each([{ field: 1 }], 'should contain object values: %s', ['field'], function(element){
+        it.each([{ field: 1 }], 'should contain object values: %s', ['field'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('1');
         });
 
-        it.each([{ field: { inner: 1 } }], 'should contain nested object values: %s', ['field.inner'], function(element){
+        it.each([{ field: { inner: 1 } }], 'should contain nested object values: %s', ['field.inner'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('1');
@@ -97,7 +97,7 @@ describe('it.each with testPerIteration: false', function(){
 
     require('../index')();
 
-    it.each([1], 'should be able to access the Mocha context', function(element){
+    it.each([1], 'should be able to access the Mocha context', function(/* element */){
         this.slow(1000);
         this.timeout(1000);
 
@@ -122,7 +122,7 @@ describe('it.each with testPerIteration: false', function(){
 
         this.slow(1000);
 
-        it.each([1], 'synchronously', function(element){
+        it.each([1], 'synchronously', function(/* element */){
             this._runnable.title.length.should.be.greaterThan(1);
         });
 
@@ -156,25 +156,25 @@ describe('it.each with testPerIteration: false', function(){
 
     describe('titles', function(){
 
-        it.each([1], 'should contain the current index: %s', ['x'], function(element){
+        it.each([1], 'should contain the current index: %s', ['x'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('0');
         });
 
-        it.each([1], 'should contain the current element: %s', ['element'], function(element){
+        it.each([1], 'should contain the current element: %s', ['element'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('1');
         });
 
-        it.each([{ field: 1 }], 'should contain object values: %s', ['field'], function(element){
+        it.each([{ field: 1 }], 'should contain object values: %s', ['field'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('1');
         });
 
-        it.each([{ field: { inner: 1 } }], 'should contain nested object values: %s', ['field.inner'], function(element){
+        it.each([{ field: { inner: 1 } }], 'should contain nested object values: %s', ['field.inner'], function(/* element */){
             this._runnable.should.be.ok;
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('1');
