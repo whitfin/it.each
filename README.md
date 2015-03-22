@@ -74,6 +74,8 @@ it.each(examples, 'Example %s with key %s and nest %s', ['example', 'nested.exam
 
 There are two reserved 'keywords' you can pass to the fields array, `x` and `element`. In this case, `x` will represent the iteration number the current test is on (starting at 0, so as to keep in track with the array), and `element` will be the element in the current processing loop.
 
+As of v0.3.1, full forms of dot notation are supported in keys, by way of [dot-notes](https://www.npmjs.com/package/dot-notes). Feel free to provide special keys and array indices for use in formatting.
+
 **Static**
 
 Static is basically the same as just calling `it` over and over again with different values in the closure. This provides an easy shorthand to create tests from existing values. The signature of static titling is the same as that of dynamic, except with the omission of the `fields` parameter.
