@@ -80,6 +80,10 @@ As of v0.3.1, full forms of dot notation are supported in keys, by way of [dot-n
 
 Static is basically the same as just calling `it` over and over again with different values in the closure. This provides an easy shorthand to create tests from existing values. The signature of static titling is the same as that of dynamic, except with the omission of the `fields` parameter.
 
+**Skip**
+
+When developing a test it is sometimes useful to be able to skip all other tests in the suite. This may be done by using `it.each.skip`.
+
 ### Context ###
 
 As of version v0.3.0 the context of the `it` is provided to the executed function in order to allow setting both `slow` and `timeout` from within the executed function. This is a potentially breaking change, however I doubt anybody was using `this` in the current version since it provided no additional context.
