@@ -185,7 +185,5 @@ describe('it.each with testPerIteration: false', function(){
             this._runnable.title.should.be.ok;
             this._runnable.title.should.endWith('- ' + element + '/2');
         });
-
     });
-
 });
