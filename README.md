@@ -1,4 +1,4 @@
-it.each [![Build Status](https://travis-ci.org/iwhitfield/it.each.svg?branch=master)](https://travis-ci.org/iwhitfield/it.each) [![Code Climate](https://codeclimate.com/github/iwhitfield/it.each/badges/gpa.svg)](https://codeclimate.com/github/iwhitfield/it.each) [![Test Coverage](https://codeclimate.com/github/iwhitfield/it.each/badges/coverage.svg)](https://codeclimate.com/github/iwhitfield/it.each)
+it.each [![Build Status](https://travis-ci.org/whitfin/it.each.svg?branch=master)](https://travis-ci.org/whitfin/it.each) [![Code Climate](https://codeclimate.com/github/whitfin/it.each/badges/gpa.svg)](https://codeclimate.com/github/whitfin/it.each) [![Test Coverage](https://codeclimate.com/github/whitfin/it.each/badges/coverage.svg)](https://codeclimate.com/github/whitfin/it.each)
 =======
 
 - [Setup](#setup)
@@ -8,7 +8,7 @@ it.each [![Build Status](https://travis-ci.org/iwhitfield/it.each.svg?branch=mas
 - [Synchronicity](#synchronicity)
 - [Issues](#issues)
 
-This module provides a way to use asynchronous loops alongside Mocha via a simple extension of the `it` handler. This works as of Mocha v2.1.0, and I would imagine it would continue to work in future against all versions, but no promises. In terms of compatibility, `it.each` is built on [TravisCI](https://travis-ci.org/iwhitfield/it.each) after every commit using Node v0.8.x, 0.10.x, 0.12.x. In addition to this, the latest version of io.js is also covered in these builds. Build results are submitted to [Code Climate](https://codeclimate.com/github/iwhitfield/it.each) for analysis.
+This module provides a way to use asynchronous loops alongside Mocha via a simple extension of the `it` handler. This works as of Mocha v2.1.0, and I would imagine it would continue to work in future against all versions, but no promises. In terms of compatibility, `it.each` is built on [TravisCI](https://travis-ci.org/whitfin/it.each) after every commit using Node v0.8.x, 0.10.x, 0.12.x. In addition to this, the latest version of io.js is also covered in these builds. Build results are submitted to [Code Climate](https://codeclimate.com/github/whitfin/it.each) for analysis.
 
 The current version is below v1.0.0 so the potential does exist for breaking changes, however this will be avoided where possible. The reason this module remains below the v1.0.0 tag is because there is no clear roadmap; meaning implementation may have to change at some point.
 
@@ -38,7 +38,7 @@ If testPerIteration is either unset or `false`, the `timeout` and `slow` values 
 
 There are two different ways you can use `it.each`; with dynamic titles, and with static titles. Dynamic is better if you're intending to track your tests through the loop, whereas static is very similar to just putting an async loop inside your call to the usual `it`. There are examples inside the `test/` directory, with both methods of titling - however here are the signatures you can use, and an explanation of how it works:
 
-**Dynamic** 
+**Dynamic**
 
 ```
 it.each(iterable, title, fields, process);
@@ -94,4 +94,4 @@ Again, as of v0.3.0 you now have the ability to execute a loop synchronously or 
 
 ### Issues ###
 
-If you find any issues inside this module, feel free to open an issue [here](https://github.com/iwhitfield/it.each/issues "it.each Issues").
+If you find any issues inside this module, feel free to open an issue [here](https://github.com/whitfin/it.each/issues "it.each Issues").
