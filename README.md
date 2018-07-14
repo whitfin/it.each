@@ -1,5 +1,6 @@
-it.each [![Build Status](https://travis-ci.org/whitfin/it.each.svg?branch=master)](https://travis-ci.org/whitfin/it.each) [![Code Climate](https://codeclimate.com/github/whitfin/it.each/badges/gpa.svg)](https://codeclimate.com/github/whitfin/it.each) [![Test Coverage](https://codeclimate.com/github/whitfin/it.each/badges/coverage.svg)](https://codeclimate.com/github/whitfin/it.each)
-=======
+# it.each
+
+[![Build Status](https://travis-ci.org/whitfin/it.each.svg?branch=master)](https://travis-ci.org/whitfin/it.each)
 
 - [Setup](#setup)
 - [Integration](#integration)
