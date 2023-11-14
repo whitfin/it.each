@@ -23,4 +23,4 @@ test
 
 # CI stuff
 .github
-.eslintrc
+.eslintrc.js
