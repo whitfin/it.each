@@ -1,6 +1,7 @@
 # it.each
 
-[![Build Status](https://travis-ci.org/whitfin/it.each.svg?branch=master)](https://travis-ci.org/whitfin/it.each)
+
+[![Build Status](https://img.shields.io/github/actions/workflow/status/whitfin/it.each/ci.yml?branch=main)](https://github.com/whitfin/it.each/actions) [![Published Version](https://img.shields.io/npm/v/it.each.svg)](https://npmjs.com/package/it.each) [![Published Downloads](https://img.shields.io/npm/dt/it.each)](https://npmjs.com/package/it.each)
 
 - [Setup](#setup)
 - [Integration](#integration)
@@ -9,7 +10,7 @@
 - [Synchronicity](#synchronicity)
 - [Issues](#issues)
 
-This module provides a way to use asynchronous loops alongside Mocha via a simple extension of the `it` handler. This works as of Mocha v2.1.0, and I would imagine it would continue to work in future against all versions, but no promises. In terms of compatibility, `it.each` is built on [TravisCI](https://travis-ci.org/whitfin/it.each) after every commit using Node v0.8.x, 0.10.x, 0.12.x. In addition to this, the latest version of io.js is also covered in these builds. Build results are submitted to [Code Climate](https://codeclimate.com/github/whitfin/it.each) for analysis.
+This module provides a way to use asynchronous loops alongside Mocha via a simple extension of the `it` handler. This works as of Mocha v2.1.0, and I would imagine it would continue to work in future against all versions, but no promises.
 
 The current version is below v1.0.0 so the potential does exist for breaking changes, however this will be avoided where possible. The reason this module remains below the v1.0.0 tag is because there is no clear roadmap; meaning implementation may have to change at some point.
 
