@@ -1,7 +1,7 @@
 # it.each
 
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/whitfin/it.each/ci.yml?branch=main)](https://github.com/whitfin/it.each/actions) [![Published Version](https://img.shields.io/npm/v/it.each.svg)](https://npmjs.com/package/it.each) [![Published Downloads](https://img.shields.io/npm/dt/it.each)](https://npmjs.com/package/it.each)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/whitfin/it.each/ci.yml?branch=main)](https://github.com/whitfin/it.each/actions) [![Published Version](https://img.shields.io/npm/v/it-each.svg)](https://npmjs.com/package/it-each) [![Published Downloads](https://img.shields.io/npm/dt/it-each)](https://npmjs.com/package/it-each)
 
 - [Setup](#setup)
 - [Integration](#integration)
